@@ -1,0 +1,42 @@
+DEPENDENCIAS
+- npm install --save-dev postcss postcss-cli
+Para utilizar postcss con la terminal necesitamos instalar también el cli
+
+SCRIPTS
+- "build:css": "postcss src/styles.css --dir dist/styles"
+Script utilizado para compilar nuestro css con postcss. Éste lo transpilará y creará un fichero css clásico.
+
+USANDO CSS COMPILADO
+- Usar el css compilado por postcss en el index.html
+
+RECOMPILAR AL HACER CAMBIOS
+- "watch:css": "postcss src/styles.css --dir dist/styles -w"
+Con este script estaremos observando los cambios realizados sobre el fichero y automáticamente lo compilaremos
+
+FICHERO DE CONFIGURACIÓN DE POSTCSS
+- postcss.config.js
+
+PÁGINA ADDONS POSTCSS
+- https://www.postcss.parts/
+
+AGREGANDO ADDONS
+- cssnano -> npm install --save-dev cssnano
+	module.exports = {
+		plugins: [
+			require('cssnano')({
+				preset: 'default',
+			}),
+		],
+	};
+Addon que minimiza todo lo posible un fichero css para que ocupe el menor espacio posible.
+
+- postcss-preset-env -> npm install --save-dev postcss-preset-env
+	module.exports = {
+		plugins: [
+			require('postcss-preset-env')({
+				stage: 1,
+			}),
+		],
+	};
+
+Addon que permite la utilización de sintaxis moderna para css y luego lo transpila para que todos los navegadores lo entiendan.

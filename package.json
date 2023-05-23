@@ -1,0 +1,27 @@
+{
+  "name": "dltt-postcss",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build:css": "postcss src/styles.css --dir dist/styles",
+    "watch:css": "postcss src/styles.css --dir dist/styles -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DudeArtero/dltt-postcss.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DudeArtero/dltt-postcss/issues"
+  },
+  "homepage": "https://github.com/DudeArtero/dltt-postcss#readme",
+  "devDependencies": {
+    "cssnano": "^6.0.1",
+    "postcss": "^8.4.23",
+    "postcss-cli": "^10.1.0",
+    "postcss-preset-env": "^8.4.1"
+  }
+}
