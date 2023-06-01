@@ -1,3 +1,5 @@
+npm init -y
+
 DEPENDENCIAS
 - npm install --save-dev postcss postcss-cli
 Para utilizar postcss con la terminal necesitamos instalar también el cli
